@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="searchbar_hint">搜索问答/文章/病虫害/专家</string>
+    <string name="title_upload_photo">拍照识别</string>
+    <string name="subtitle_upload_photo">诊断未知病虫害</string>
+    <string name="title_medicine_solution">配药方案</string>
+    <string name="subtitle_medicine_solution">已知病虫害防治</string>
+    <string name="title_question_answer">问答圈子</string>
+    <string name="subtitle_question_answer">专家免费解答</string>
 </resources>

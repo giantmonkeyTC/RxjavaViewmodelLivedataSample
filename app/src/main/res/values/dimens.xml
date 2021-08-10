@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homepage_guideline_horizontal_margin">16dp</dimen>
+    <dimen name="homepage_textsize_small">12dp</dimen>
+    <dimen name="searchbar_height">28dp</dimen>
+    <dimen name="radius_searchbar">8dp</dimen>
+</resources>

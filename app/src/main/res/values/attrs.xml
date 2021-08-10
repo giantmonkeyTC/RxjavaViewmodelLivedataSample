@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HomepageCombinationButton">
+        <attr name="button_src" format="reference" />
+        <attr name="button_size" format="dimension" />
+        <attr name="title_text" format="string" />
+        <attr name="title_text_color" format="color" />
+        <attr name="title_textSize" format="dimension" />
+        <attr name="subtitle_text" format="string" />
+        <attr name="subtitle_text_color" format="color" />
+        <attr name="subtitle_textSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

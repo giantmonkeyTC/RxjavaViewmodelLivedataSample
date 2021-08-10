@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Homepage_Location_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="保定"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/homepage_textsize_small"
+        app:layout_constraintEnd_toEndOf="@id/Homepage_Weather_TV"
+        app:layout_constraintStart_toStartOf="@id/Homepage_Weather_TV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Homepage_Weather_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="晴/13ºC"
+        android:textSize="@dimen/homepage_textsize_small"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/Homepage_Location_TV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="@dimen/homepage_guideline_horizontal_margin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_end="@dimen/homepage_guideline_horizontal_margin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/searchbar_height"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape_searchbar"
+        app:layout_constraintBottom_toBottomOf="@id/Homepage_Weather_TV"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/Homepage_Weather_TV"
+        app:layout_constraintTop_toTopOf="@id/Homepage_Location_TV">
+
+        <ImageView
+            android:id="@+id/icon_searchbar"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_searchbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/searchbar_hint"
+            android:textSize="@dimen/homepage_textsize_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_searchbar"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.myapplication.widget.HomepageCombinationButton
+        android:id="@+id/Homepage_Button_Upload_Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        app:button_src="@drawable/ic_upload_photo"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/Homepage_Weather_TV"
+        app:subtitle_text="@string/subtitle_upload_photo"
+        app:subtitle_textSize="3dp"
+        app:subtitle_text_color="@color/textColorGrey"
+        app:title_text="@string/title_upload_photo"
+        app:title_textSize="4dp"
+        app:title_text_color="@android:color/black" />
+
+    <com.example.myapplication.widget.HomepageCombinationButton
+        android:id="@+id/Homepage_Button_Medicine_Solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:button_src="@drawable/ic_medicine_solution"
+        app:layout_constraintEnd_toStartOf="@id/Homepage_Button_Question_Answer"
+        app:layout_constraintStart_toEndOf="@id/Homepage_Button_Upload_Photo"
+        app:layout_constraintTop_toTopOf="@id/Homepage_Button_Upload_Photo"
+        app:subtitle_text="@string/subtitle_medicine_solution"
+        app:subtitle_textSize="3dp"
+        app:subtitle_text_color="@color/textColorGrey"
+        app:title_text="@string/title_medicine_solution"
+        app:title_textSize="4dp"
+        app:title_text_color="@android:color/black" />
+
+    <com.example.myapplication.widget.HomepageCombinationButton
+        android:id="@+id/Homepage_Button_Question_Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        app:button_src="@drawable/ic_question_answer"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/Homepage_Weather_TV"
+        app:layout_constraintTop_toTopOf="@id/Homepage_Button_Upload_Photo"
+        app:subtitle_text="@string/subtitle_question_answer"
+        app:subtitle_textSize="3dp"
+        app:subtitle_text_color="@color/textColorGrey"
+        app:title_text="@string/title_question_answer"
+        app:title_textSize="4dp"
+        app:title_text_color="@android:color/black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

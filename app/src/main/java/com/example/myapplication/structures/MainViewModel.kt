@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.utils.observeEventOnUi
 import io.reactivex.rxjava3.functions.Consumer
-import com.example.myapplication.structures.*
 
 class MainViewModel : ViewModel() {
     val counterNumLD = MutableLiveData<Int>()
