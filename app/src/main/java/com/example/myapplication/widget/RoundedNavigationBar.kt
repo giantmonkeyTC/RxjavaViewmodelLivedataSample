@@ -9,6 +9,7 @@ import android.view.WindowManager
 
 class RoundedNavigationBar(context: Context, attributeSet: AttributeSet) :
     View(context, attributeSet) {
+    //曲线凸起型导航栏
     var mPaint: Paint = Paint()
     var mPath: Path = Path()
     var mRect: Rect = Rect()
