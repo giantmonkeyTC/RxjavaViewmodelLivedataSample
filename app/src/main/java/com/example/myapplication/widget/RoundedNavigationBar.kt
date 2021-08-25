@@ -8,7 +8,7 @@ import android.view.Window
 import android.view.WindowManager
 
 /*
-    曲线凸起型导航栏
+    Rounded Navigation Bar
  */
 class RoundedNavigationBar(context: Context, attributeSet: AttributeSet) :
     View(context, attributeSet) {
@@ -29,17 +29,27 @@ class RoundedNavigationBar(context: Context, attributeSet: AttributeSet) :
         mRect.left = 0
         mRect.bottom = height
         mRect.right = width
-        val dPx = 0f    //起始点坐标
-        val dPy = 0.3f * mRect.bottom.toFloat()
-        val controlPx = 0.5f * mRect.right.toFloat()    //二次曲线控制点坐标
+        val dPx = 0f    //start point axis X
+        val dPy = 0.3f * mRect.bottom.toFloat() //start point axis Y
+        val controlPx = 0.5f * mRect.right.toFloat()  
         val controlPy = -dPy
-        mPath.moveTo(dPx, dPy)   
-        mPath.lineTo((0.40 * mRect.right).toFloat(), dPy)
-        mPath.quadTo(
+        mPath.moveTo(dPx, dPy)
+        mPath.lineTo((0.30 * mRect.right).toFloat(), dPy)
+        mPath.cubicTo(
+            (0.40 * mRect.right).toFloat(),
+            dPy,
+            (0.43 * mRect.right).toFloat(),
+            4f,
             controlPx,
-            controlPy,
-            (0.6 * mRect.right).toFloat(),
-            dPy
+            4f,
+        )
+        mPath.cubicTo(
+            (0.57 * mRect.right).toFloat(),
+            4f,
+            (0.60 * mRect.right).toFloat(),
+            dPy,
+            (0.70 * mRect.right).toFloat(),
+            dPy,
         )
         mPath.lineTo(
             mRect.right.toFloat(),
@@ -53,9 +63,11 @@ class RoundedNavigationBar(context: Context, attributeSet: AttributeSet) :
             mRect.left.toFloat(),
             mRect.bottom.toFloat()
         )
-        mPath.close()
-        mPaint.color = Color.BLUE
-        mPaint.style = Paint.Style.FILL_AND_STROKE
+//        mPath.close()
+        mPaint.strokeWidth = 1f
+        mPaint.setShadowLayer(8f, 0f, -2f, 0xFF000000.toInt())
+        mPaint.color = 0x33BDBDBD.toInt()
+        mPaint.style = Paint.Style.STROKE
         canvas?.drawPath(mPath, mPaint)
     }
 

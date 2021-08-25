@@ -8,15 +8,28 @@
         android:id="@+id/navigation_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <Button-->
-<!--        android:layout_width="30dp"-->
-<!--        android:layout_height="30dp"-->
+<!--    <com.example.myapplication.widget.HomepageCombinationButton-->
+<!--        android:id="@+id/Homepage_Button_Upload_Photo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
 <!--        android:layout_marginTop="20dp"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/navigation_bar"-->
+<!--        app:button_src="@drawable/ic_upload_photo"-->
 <!--        app:layout_constraintStart_toStartOf="@id/navigation_bar"-->
-<!--        app:layout_constraintTop_toTopOf="@id/navigation_bar" />-->
+<!--        app:layout_constraintEnd_toEndOf="@id/navigation_bar"-->
+<!--        app:layout_constraintTop_toTopOf="@id/navigation_bar"-->
+<!--        />-->
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:background="@drawable/ic_camera_solid"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="@id/navigation_bar"
+        app:layout_constraintTop_toTopOf="@id/navigation_bar"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
