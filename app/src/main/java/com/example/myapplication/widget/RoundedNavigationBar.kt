@@ -7,9 +7,12 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 
+/*
+    曲线凸起型导航栏
+ */
 class RoundedNavigationBar(context: Context, attributeSet: AttributeSet) :
     View(context, attributeSet) {
-    //曲线凸起型导航栏
+
     var mPaint: Paint = Paint()
     var mPath: Path = Path()
     var mRect: Rect = Rect()
@@ -26,11 +29,11 @@ class RoundedNavigationBar(context: Context, attributeSet: AttributeSet) :
         mRect.left = 0
         mRect.bottom = height
         mRect.right = width
-        val dPx = 0f
+        val dPx = 0f    //起始点坐标
         val dPy = 0.3f * mRect.bottom.toFloat()
-        val controlPx = 0.5f * mRect.right.toFloat()
+        val controlPx = 0.5f * mRect.right.toFloat()    //二次曲线控制点坐标
         val controlPy = -dPy
-        mPath.moveTo(dPx, 0f)
+        mPath.moveTo(dPx, dPy)   
         mPath.lineTo((0.40 * mRect.right).toFloat(), dPy)
         mPath.quadTo(
             controlPx,
