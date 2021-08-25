@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homepage)
+        setContentView(R.layout.layout_navigationbar_test)
         val mainViewModel: MainViewModel by viewModels()
         mainViewModel.setupEvent()
         window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
